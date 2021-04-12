@@ -9,27 +9,6 @@
   </url>
   
   <url>
-    <loc>https://www.hatcher.live/2021/02/12/jdk/</loc>
-    
-    <lastmod>2021-02-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/2021/02/12/mysql/</loc>
-    
-    <lastmod>2021-02-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/2021/02/12/hadoop/</loc>
-    
-    <lastmod>2021-02-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.hatcher.live/2021/02/11/git-hexo/</loc>
     
     <lastmod>2021-02-12</lastmod>
@@ -37,21 +16,14 @@
   </url>
   
   <url>
-    <loc>https://www.hatcher.live/2021/02/10/hello-world/</loc>
-    
-    <lastmod>2021-02-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/categories/index.html</loc>
+    <loc>https://www.hatcher.live/about/index.html</loc>
     
     <lastmod>2021-02-11</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.hatcher.live/about/index.html</loc>
+    <loc>https://www.hatcher.live/categories/index.html</loc>
     
     <lastmod>2021-02-11</lastmod>
     
@@ -95,14 +67,7 @@
 
   
   <url>
-    <loc>https://www.hatcher.live/tags/hadoop/</loc>
-    <lastmod>2021-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/tags/%E9%9B%86%E7%BE%A4/</loc>
+    <loc>https://www.hatcher.live/tags/docker/</loc>
     <lastmod>2021-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -110,20 +75,6 @@
   
   <url>
     <loc>https://www.hatcher.live/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/tags/linux/</loc>
-    <lastmod>2021-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/tags/jdk/</loc>
     <lastmod>2021-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -145,13 +96,6 @@
   
   <url>
     <loc>https://www.hatcher.live/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-04-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.hatcher.live/tags/docker/</loc>
     <lastmod>2021-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
