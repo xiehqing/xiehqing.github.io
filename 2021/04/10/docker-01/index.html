@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://www.hatcher.live/data_img/docker-01/aliyun_docker_set_01.png">
 <meta property="og:image" content="https://www.hatcher.live/data_img/docker-01/aliyun_docker_set_02.png">
 <meta property="article:published_time" content="2021-04-10T14:22:00.000Z">
-<meta property="article:modified_time" content="2021-04-12T17:05:26.758Z">
+<meta property="article:modified_time" content="2021-04-13T16:45:55.044Z">
 <meta property="article:author" content="Hatcher">
 <meta property="article:tag" content="docker">
 <meta property="article:tag" content="教程">
@@ -347,10 +347,10 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2021/04/10/docker-01/#comments" class="article-comment-link">Comments</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2.5k(words)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">Word Count: 2.9k(words)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 9(minutes)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">Read Count: 11(minutes)</span>
 	
 
       </div>
@@ -462,7 +462,57 @@ docker version
 docker info 
 #万能命令
 docker &#123;命令&#125; --help  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<h2 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h2><p>1、查看所有本地的主机上的镜像</p>
+<pre class="line-numbers language-none"><code class="language-none">docker images [options]
+options:
+  -a : 列出所有镜像 --all
+  -f : 过滤  --filter
+  -q : 只显示镜像id  --quiet<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2、搜索镜像</p>
+<pre class="line-numbers language-none"><code class="language-none">docker search [镜像名称]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>3、下载镜像</p>
+<pre class="line-numbers language-none"><code class="language-none">docker pull [镜像名称:tag]  如果不写tag,默认就是最新的版本<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>4、删除镜像</p>
+<pre class="line-numbers language-none"><code class="language-none"># 删除镜像
+docker rmi -f [镜像id]
+# 删除多个镜像，空格分开
+docker rmi -f [镜像id1] [镜像id2] [镜像id3] 
+# 删除全部
+docker rmi -f $&#123;docker images -aq&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h2><p>1、新建容器并启动</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run [可选参数] image [命令]
+   参数说明：
+     --name&#x3D;&quot;NAME&quot; 指定容器名称，用于区分容器
+     -d 后台方式运行
+     -it 使用交互方式运行，进入容器查看内容
+     -p 指定容器的端口 
+          -p ip:主机端口：容器端口
+          -p 主机端口:容器端口（常用）
+          -p 容器端口
+          容器端口
+     -P 随机指定端口<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2、列出所有运行的容器</p>
+<pre class="line-numbers language-none"><code class="language-none">docker ps [options]
+options:
+  -a : 列出当前正在运行的容器+带出历史运行过的容器
+  -n&#x3D;? : 显示最新创建的容器
+  -q : 只显示容器的编号<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3、退出容器</p>
+<pre class="line-numbers language-none"><code class="language-none">exit 直接容器停止并退出
+Ctrl+P+Q 容器不停止退出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>4、启动和停止容器的操作</p>
+<pre class="line-numbers language-none"><code class="language-none">启动：docker start 容器id
+重启：docker restart 容器id
+停止：docker stop 容器id
+强制停止：docker kill 容器id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常用其它命令"><a href="#常用其它命令" class="headerlink" title="常用其它命令"></a>常用其它命令</h2><p>1、后台启动</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run -d 镜像名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2、查看日志</p>
+<pre class="line-numbers language-none"><code class="language-none">docker logs -f -t --tail [数量] 容器id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>3、查看容器内部的进程信息</p>
+<pre class="line-numbers language-none"><code class="language-none">docker top 容器id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>4、查看容器镜像元数据</p>
+<pre class="line-numbers language-none"><code class="language-none">docker inspect 容器id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
       
     </div>
     <div class="article-footer">
